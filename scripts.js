@@ -3,7 +3,7 @@
 //-- Page menu and repo scripts --
 
  // Changed with make tool
- var cur_test_results = "https://github.com/CHANGE_USER/CHANGE_REPO/blob/main/";
+ var cur_test_results = "https://github.com/jhauga/data-conversion-test-test/blob/main/";
 
  // Global elements.
  var navList = document.getElementById("navList");

@@ -95,7 +95,7 @@ function run_test() {
   fi
 
 
-### 4. SET A START AND END TIME FOR EACH BUILD WITH -CHANGE_COMMAND-, PUSHING START AND END TO TWO SEPARATE ARRAYS. 
+### 4. SET A START AND END TIME FOR EACH BUILD WITH asciidoctor, PUSHING START AND END TO TWO SEPARATE ARRAYS. 
 ###########################################################################################################################	
   # repetitive function to get time for each build
   calc_build() {
@@ -120,7 +120,7 @@ function run_test() {
   }
 
 
-### 5. IN ` RUN_COMMAND() ` SUB-FUNCTION CALL -CHANGE_COMMAND- TO BUILD WITH -S_U- AND -P_U- AND CALCULATE BUILD TIME(S). 
+### 5. IN ` RUN_COMMAND() ` SUB-FUNCTION CALL asciidoctor TO BUILD WITH asciidoctor AND jhauga AND CALCULATE BUILD TIME(S). 
 #############################################################################################################################
   # repetitive function to make files
   run_command() {

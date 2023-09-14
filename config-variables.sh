@@ -18,7 +18,7 @@ source config/checkFileSizes.sh
 #                                                                                 #        
 # Set to 1 to agree; 0 to disagree.                                               #
 ###################################################################################
-_acknowledgeAndAgreeToUSAGE_AGREEMENT=0
+_acknowledgeAndAgreeToUSAGE_AGREEMENT=1
 
 # REQUIRED CONFIG INSTRUCTIONS: #########################################################
 #  1. Define the new repo name in variable.                                             #                        
@@ -48,14 +48,14 @@ _acknowledgeAndAgreeToUSAGE_AGREEMENT=0
 # ------------------                                                   #
 # Name of new repository for tests result.                             #
 ########################################################################
-_testResultRepo="command-test"
+_testResultRepo="data-conversion-test-test"
 
 # II. CHANGE CONFIG VARIABLES ########################################################################################
-_COMMAND_TEST="command"       # command ------ the command/script that will run                                      #  
-_sourceUserName="source"      # source ------- user that the repo was forked from                                    #    
-_pullUserName="pull"          # pull --------- user with fork and making pull request                                #        
-_repoName="repo-name"         # repo name    - the repo where command is stored for clone                            #
-_toTestRoot=1                 # to test root - copies the command to test root for use, else command used in clone   # 
+_COMMAND_TEST="asciidoctor"       # command ------ the command/script that will run                                      #  
+_sourceUserName="asciidoctor"      # source ------- user that the repo was forked from                                    #    
+_pullUserName="jhauga"          # pull --------- user with fork and making pull request                                #        
+_repoName="asciidoctor"         # repo name    - the repo where command is stored for clone                            #
+_toTestRoot=0                 # to test root - copies the command to test root for use, else command used in clone   # 
 _exec="bin/$_COMMAND_TEST"    # exec       - path to executable for test.                                            #
                               #  IMPORTANT - only needs changing if "_toTestRoot" is 0                               #
                               #  IMPORTANT - if executable name is different, then remove variable and change name   #
@@ -76,13 +76,13 @@ _cloneExtract=1               # clone extract - 1 to clone from github, 0 to use
 # By default the command will be run with no options.                  #
 # Remove "" from array to unset 'run with no option default'.          #
 ########################################################################
-declare -a _optionsToRun=("")
+declare -a _optionsToRun=('' '-o' '-D')
 
 # IV. DECLARE SOURCE FILE EXTENSIONS ###################################
 # ----------------------------------                                   #
 # Configuration - file extension to match and move to data folder.     #
 ########################################################################
-declare -a _fileExtensions=('.ext1' '.ext2' '.ext3')
+declare -a _fileExtensions=('.adoc' '.asciidoc' '.asc' '.ad' '.md')
 
 # V. CHANGE FILE EXTENSION FOR TARGET FILE #############################
 # ----------------------------------------                             #
@@ -94,13 +94,13 @@ _targetFileExtension=".html"
 # ------------------------------------------                           #
 # Configure user(s) and repositories to clone and build ful test from. #
 ########################################################################
-declare -a _fullTestRepos=('userA' 'repoA' 'userB' 'repoB' 'userC' 'repoC')
+declare -a _fullTestRepos=('git-lfs' 'git-lfs' 'gofiber' 'fiber' 'asciidoctor' 'asciidoctor')
 
 # VII. CHANGE UNIQUE REPO ##############################################
 # -----------------------                                              #
 # Specify unique user repo to make separate foler.                     #
 ########################################################################
-_unqUser="userC"
+_unqUser='asciidoctor'
 
 # VIII. CHANGE COMMAND SYNTAX #####################################################
 # ---------------------------                                                     #
